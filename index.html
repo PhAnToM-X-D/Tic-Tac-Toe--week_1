@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    body {
+        background-image: url(./SL-030722-49030-02.jpg);
+    }
+    .divdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        border: 1px solid aqua;
+        border-radius: 20px;
+        height: 15vh;
+    }
+    .pp{
+        font-family: "Bitcount Grid Double", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 70px;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0.5,
+            "ELSH" 0,
+            "ELXP" 0;
+    }
+    .divdivdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        height: 75vh;
+    }
+    .blocker{
+        display: none;
+    }
+    #bb{
+        font-size: 100px;
+        background-color: #3EA8C1;
+        border: 1px solid #3EA8C1;
+        border-radius: 20px;
+        font-family: "Bitcount Grid Double", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0.5,
+            "ELSH" 0,
+            "ELXP" 0;
+    }
+    .grid-container{
+        display: grid;
+        height: 45vh;
+        width: 30vw;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr ;
+        border-radius: 20px;
+        gap: 5px; 
+        margin: 50px auto;
+        width: max-content;
+    }
+    .cell {
+        background-color: transparent; /* Keep it transparent */
+        border: 3px solid #3EA8C1; /* Standard line color */
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9vw;
+        height: 8vw;
+    }
+    .imgg{
+        height: 300px;
+        width: 300px
+    }
+    .img{
+        height: 8vw;
+        width: 11vw;
+    }
+    .inst{
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Luckiest Guy", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 150;
+        font-size: 20px;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0.5,
+            "ELSH" 0,
+            "ELXP" 0;
+
+    }
+    .glow-box {
+        filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.8)); 
+    }
+    #hst{
+        position:absolute;
+        width: 33vw;
+    }
+    .reset{
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    #resetbtn{
+        font-size: 50px;
+        background-color: #3EA8C1;
+        border: 1px solid #3EA8C1;
+        border-radius: 20px;
+        font-family: "Bitcount Grid Double", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0.5,
+            "ELSH" 0,
+            "ELXP" 0;
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="divdiv">
+        <p class="pp">TIC-TAC-TOE</p>
+    </div>
+    <div id="inst" class="blocker">
+        Click on one of the pegs to decide the starting player!
+    </div>
+    <div class="divdivdiv" id="rmdiv">
+        <button id="bb">Play game!</button>
+    </div>
+    <div id="flexbox" class="blocker">
+        <img class = "imgg" id = "bluepeg"src="blue-peg-removebg-preview.png" alt="You">
+
+        <div class = "grid-container">
+        <div class="cell" id="1">
+        </div>
+        <div class="cell" id="2">
+        </div>
+        <div class="cell" id="3">
+        </div>
+        <div class="cell" id="4">
+        </div>
+        <div class="cell" id="5">
+        </div>
+        <div class="cell" id="6">
+        </div>
+        <div class="cell" id="7">
+        </div>
+        <div class="cell" id="8">
+        </div>
+        <div class="cell" id="9">
+        </div>
+        </div>
+
+        <img class="imgg" id = "redpeg" src="red-peg-removebg-preview.png" alt="Computer">
+    </div>
+    <div id="reset" class="blocker" >
+        <button id = "resetbtn">
+            Click me to reset!
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
