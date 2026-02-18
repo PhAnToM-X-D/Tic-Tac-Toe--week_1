@@ -33,10 +33,10 @@ var count = -1;
 const inst = document.getElementById("inst");
 const redpeg = document.getElementById("redpeg");
 const bluepeg = document.getElementById("bluepeg");
+
 /*
 Below this is the working of the player selection
 */
-
 var bluesec = 0;
 var redsec = 0;
 
