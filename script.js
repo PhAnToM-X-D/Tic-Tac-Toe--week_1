@@ -78,10 +78,9 @@ for (var i = 0; i < 9; i++) {
   btns[i].addEventListener("click", function () {
     //This condition setup ensures proper chances to players
     if (redsec == 1) {
-        if (this.innerHTML.trim() !== "") {
-            return; 
-        }
-        else if (count % 2 == 0) {
+      if (this.innerHTML.trim() !== "") {
+        return;
+      } else if (count % 2 == 0) {
         this.innerHTML =
           '<img class ="img" src="rcirc-removebg-preview.png" alt="red-circle">';
         redpeg.style.filter = "";
@@ -96,23 +95,22 @@ for (var i = 0; i < 9; i++) {
         redpeg.style.filter = "drop-shadow(0 0 15px rgba(255, 0, 255, 0.8))";
         count++;
       }
-    } else if (bluesec == 1 ) {
-        if (this.innerHTML.trim() !== "") {
-            return; 
-        }
-        else if (count % 2 == 1 ) {
+    } else if (bluesec == 1) {
+      if (this.innerHTML.trim() !== "") {
+        return;
+      } else if (count % 2 == 1) {
         this.innerHTML =
           '<img class ="img" src="rcirc-removebg-preview.png" alt="red-circle">';
         redpeg.style.filter = "";
         redpeg.classList.add("imgg");
         bluepeg.style.filter = "drop-shadow(0 0 15px #3EDFF4)";
         count++;
-      } else if (count % 2 == 0 ) {
+      } else if (count % 2 == 0) {
         this.innerHTML =
           '<img class = "img" src="bcross-removebg-preview.png" alt="blue-cross">';
         bluepeg.style.filter = "";
         bluepeg.classList.add("imgg");
-        redpeg.style.filter = "drop-shadow(0 0 15px rgba(255, 0, 255, 0.8))"
+        redpeg.style.filter = "drop-shadow(0 0 15px rgba(255, 0, 255, 0.8))";
         count++;
       }
     } else {
@@ -157,9 +155,9 @@ for (var i = 0; i < 9; i++) {
             btnb = btns[b];
             btnc = btns[c];
 
-            btna.style.backgroundColor="#5CD2D6";
-            btnb.style.backgroundColor="#5CD2D6";
-            btnc.style.backgroundColor="#5CD2D6";
+            btna.style.backgroundColor = "#5CD2D6";
+            btnb.style.backgroundColor = "#5CD2D6";
+            btnc.style.backgroundColor = "#5CD2D6";
 
             if (i1.includes("bcross-removebg-preview.png")) {
               alert("Blue wins!");
@@ -184,17 +182,14 @@ resetbtn.addEventListener("click", function () {
   setTimeout(function () {
     resetbtn.style.backgroundColor = "#3EA8C1";
   }, 50);
-  for(var j = 0; j<9 ; j++){
+  for (var j = 0; j < 9; j++) {
     btns[j].innerHTML = "";
     count = -1;
     redsec = 0;
     bluesec = 0;
-    inst.innerHTML='Click on one of the pegs to decide the starting player!';
+    inst.innerHTML = "Click on one of the pegs to decide the starting player!";
     bluepeg.style.filter = "";
     redpeg.style.filter = "";
     btns[j].style.backgroundColor = "";
   }
 });
-
-
-
