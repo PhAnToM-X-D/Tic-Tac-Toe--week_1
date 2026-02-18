@@ -44,7 +44,10 @@ if (count == -1) {
   const pegs = [redpeg, bluepeg];
   for (var i = 0; i < 2; i++) {
     pegs[i].addEventListener("click", function () {
-      if (this == redpeg) {
+      if (bluesec == 1 || redsec == 1){
+        alert("You have already selected a starting player! Now please take turns");
+      }
+      else if (this == redpeg) {
         redpeg.style.filter = "drop-shadow(0 0 15px rgba(255, 0, 255, 0.8))";
         redsec = 1;
         count = 0;
