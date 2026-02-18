@@ -94,9 +94,6 @@
             "ELXP" 0;
 
     }
-    .glow-box {
-        filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.8)); 
-    }
     #hst{
         position:absolute;
         width: 33vw;
